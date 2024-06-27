@@ -6,11 +6,7 @@ import "./globals.css";
 
 const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
 
-interface VideoPlayerProps {
-  url: string;
-}
-
-const VideoPlayer: React.FC<VideoPlayerProps> = () => {
+const VideoPlayer = () => {
   const [file, setFile] = useState<File | null>(null);
   const [url, setUrl] = useState<string | null>(null);
 
